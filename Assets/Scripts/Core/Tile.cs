@@ -1,16 +1,11 @@
 using UnityEngine;
 
-public class Tile : MonoBehaviour
+[System.Serializable]
+public class Tile
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public enum TileType { Wall, Floor, Door, Trap }
+    public TileType Type;
+    public Vector2Int Position;
+    public Entity Occupant; 
+    public bool IsExplored; 
 }
